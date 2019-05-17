@@ -20,3 +20,13 @@ body {
     padding: 20px;
     font-family: 'Stylish', sans-serif;
 }
+
+#portfolio p{
+    padding-left:40px;
+    font-family: 'Indie Flower', cursive
+}
+
+#portfolio h1{
+    padding-left:40px;
+    Fontsize:80 
+    font-family: 'Indie Flower', cursive
