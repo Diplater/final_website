@@ -4,10 +4,9 @@ let spring = 0.05;
 let gravity = 0;
 let friction = -0;
 let balls = [];
-
-function setup() {
-  var canvas=createCanvas(windowWidth,500);
-  canvas.parent ('header');
+ 
+function setup(){
+    createCanvas(720, 400)
     for (let i = 0; i < numBalls; i++) {
     balls[i] = new Ball(
       random(width),
@@ -47,9 +46,8 @@ class Ball {
       let dy = this.others[i].y - this.y;
       let distance = sqrt(dx * dx + dy * dy);
       let minDist = this.others[i].diameter / 2 + this.diameter / 2;
-  
-      if (distance < minDist) {
         //console.log("2");
+      if (distance < minDist) {
         let angle = atan2(dy, dx);
         let targetX = this.x + cos(angle) * minDist;
         let targetY = this.y + sin(angle) * minDist;
@@ -86,21 +84,5 @@ class Ball {
   display() {
     ellipse(this.x, this.y, this.diameter, this.diameter);
   }
-
- 
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
+    
